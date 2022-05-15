@@ -1,5 +1,7 @@
 # home-dns-architecture-tutorial
 
+Please let me know if you give any suggestion on my solution / improvement on config setting.
+
 This repository is to provide the idea and the major config of my home DNS architecture with following objectives:
 * Build a solution with security level higher than sole DNS over TLS but weaker than routing every traffic data to VPN Servers
 * Do public DNS query by getting rid of local ISP DNS tracking, and choose to trust VPN Provider out of a country instead
