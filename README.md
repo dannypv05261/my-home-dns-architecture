@@ -4,7 +4,8 @@ Please let me know if you give any suggestion on my solution / improvement on co
 
 This repository is to provide the idea and the major config of my home DNS architecture with following objectives:
 * Build a solution with security level higher than sole DNS over TLS but weaker than routing every traffic data to VPN Servers
-* Do public DNS query by getting rid of local ISP DNS tracking, and choose to trust VPN Provider out of a country instead
+* Do public DNS query by getting rid of local ISP, and choose to trust VPN Provider to deliever our DNS request & Cloudflare DNS instead.
+  * *  without descrpying the TLS content for monitoring 
 * Enable DNS blacklist for whitelist devices within local network
 * Resolve internal Kubernetes services with internal domain name
 * Make every components replacable, robust and stateless under Mircoservice architecture without mounting physical volume
