@@ -10,7 +10,7 @@ This repository is to provide the idea and the major config of my home DNS archi
 * Make every components replacable, robust and stateless under Mircoservice architecture without mounting physical volume
 * All the stuff run in a Kubernete cluster
 
-![Architecture](https://dannypv.ddns.net/share/40dc6f01deb5c5c61f4515e8c0337b4d34f3bbe3ca4f7e376ae22aba)
+![Architecture](https://dannypv.ddns.net/share/2b9cbf9eb2ef70fdffb3c27b2e006ae17cf5d4707bcd7165c90504aa)
 
 Cluster IP address  | Service
 --- | ---
@@ -361,5 +361,6 @@ Deployment: set unbound container
 
 - - - -
 
-Let do DNS leak test in one of the client
-![DNS leak](https://dannypv.ddns.net/share/b8f1a5d64006b52aa5f151fb863363ae4318bcb3c7b97754cbd80db5)
+Let do DNS leak test in one of the client.
+As our unbound connected to JP VPN Server and we use Cloudflare as public DNS. So, it is fine to leak to Cloudflare under recusive queries
+![DNS leak](https://dannypv.ddns.net/share/b53e7f3d2819e8069ff10abc41c36431ab4b2548998380c03bb67ebc)
