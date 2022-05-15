@@ -13,7 +13,7 @@ This repository is to provide the idea and the major config of my home DNS archi
 ![Architecture](https://dannypv.ddns.net/share/40dc6f01deb5c5c61f4515e8c0337b4d34f3bbe3ca4f7e376ae22aba)
 
 Cluster IP address  | Service
-- | -
+--- | ---
 10.e.e.e  | etcd
 10.w.w.w  | CoreDNS
 10.x.x.x  | Unbound 1
