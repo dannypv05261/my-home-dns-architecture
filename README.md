@@ -3,7 +3,7 @@
 I use this setup starting from 2020 to now. I will keep updating it if I find something new. Please let me know in  [Discussions](https://github.com/dannypv05261/home-dns-architecture-tutorial/discussions/1) if you give any suggestion on my solution / improvement on config setting.
 
 This repository is to provide the idea and the major config of my home DNS architecture with following objectives:
-* Build a solution with security level higher than sole DNS over TLS but weaker than routing every traffic data to VPN Servers
+* Build a solution with security level higher than sole DNS over TLS but weaker than routing everything via VPN tunnel
 * Do public DNS query by getting rid of local ISP, and choose to trust VPN provider.
   * i.e. I turn to trust my VPN provider to deliever our DNS request without descrpying the DNS content for monitoring and without keeping my browsing history
 * Enable DNS blacklist for whitelist devices within local network
