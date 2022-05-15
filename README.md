@@ -29,11 +29,17 @@ ConfigMap: Query upstream DNS servers by sequence so that we can ask Pi-Hole to 
     # don't cache negative result
     no-negcache
 ```
+
+- - - -
+
 ConfigMap: Load CNAME
 ```
   05-pihole-custom-cname.conf: |
     cname=a.lan,alias.lan
 ```
+
+- - - -
+
 As Pi-hole 4 uses SQLlite to store config files, we need to import config data from file by some tricks.
 Here are some examples
 ConfigMap:
@@ -55,6 +61,9 @@ ConfigMap:
   whitelist-wildcard.txt: |
     xxx.edu.hk
 ```
+
+- - - -
+
 Deployment: import ConfigMap files  into database by different tricks of adding args
 1. Create a enabling DNS filtering user group
 2. Import whitelist
@@ -105,6 +114,9 @@ Deployment: import ConfigMap files  into database by different tricks of adding 
             name: pihole-configmap-etc-pihole
             
 ```
+
+- - - -
+
 ##### Limitation
 1. The import data trick will be broken when Pi-hole officals update the database structure
 2. To update config, we need to update ConfigMap and restart Pi-hole containers
@@ -136,6 +148,8 @@ external-dns's deployment: detect ingress change and register domain names to et
             - name: ETCD_URLS
               value: http://etcd.default:2379
 ```
+
+- - - -
 
 CoreDNS's Corefile ConfigMap: read Ingress DNS from etcd for each query
 * Set port 53 to main DNS with unbound upstream and set port 5353 to fail-over DNS with cloudflare DNS with HTTP over TLS
@@ -190,6 +204,8 @@ CoreDNS's Corefile ConfigMap: read Ingress DNS from etcd for each query
         loadbalance
     }
 ```
+
+- - - -
 
 ##### Limitation
 The fail-over mechanism only works when the upstream instance is down, any response that is not a network error (REFUSED, NOTIMPL, SERVFAIL, etc) is taken as a healthy upstream. (From https://coredns.io/plugins/forward/)
@@ -246,6 +262,9 @@ Deployment: VPN Sharing: with VPN client as a side car container, unbound contai
             type: CharDevice
         ......
 ```
+
+- - - -
+
 ConfigMap: set unbound config file
 * set unbound query upstream to public DNS with DNS over TLS
 * must set allow TCP when I used with surfshark. I personally recommend UDP only if your VPN client supports it
@@ -297,6 +316,9 @@ data:
       #outgoing-interface: fe80:0000:0000:0000:0000:0000:0000:0000/16
       ......
 ```
+
+- - - -
+
 Deployment: set unbound container
 * set dnsConfig to public DNS because we need to download config file from a domain name. We need to break the chicken and egg problem
 * must set allow TCP when I used with surfshark. I personally recommend UDP only if your VPN client supports it
@@ -331,6 +353,8 @@ Deployment: set unbound container
             name: unbound-configmap-etc
     ......
 ```
+
+- - - -
 
 ##### Limitation
 You will lack your DNS info to your VPN Server, but it is expected as the objectives above. If anyone has better way to do so, please let me know. Thanks.
