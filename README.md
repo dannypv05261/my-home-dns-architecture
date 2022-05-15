@@ -274,10 +274,11 @@ Deployment: VPN Sharing: with VPN client as a side car container, unbound contai
 - - - -
 
 ConfigMap: set unbound config file
-* set unbound query upstream to public DNS with DNS over TLS
+* set unbound query upstream to public DNS with DNS over TLS (DOH)
 * must set allow TCP when I used with surfshark. I personally recommend UDP only if your VPN client supports it
 * allow downstream to query unbound
 * if your VPN service doesn't route all the traffic to VPN tunnel, you need to set it manually with 'outgoing-interface' property
+* mount ca cert from host for doing DNS over TLS (DOH)
 ```
 data:
   unbound.conf: |
