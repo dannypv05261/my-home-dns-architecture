@@ -1,4 +1,4 @@
-# home-dns-architecture-tutorial
+Architecture of my home DNS
 
 Please let me know if you give any suggestion on my solution / improvement on config setting.
 
