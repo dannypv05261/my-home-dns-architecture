@@ -7,8 +7,10 @@ This repository is to provide the idea and the major config of my home DNS archi
 * Do public DNS query by getting rid of local ISP, and choose to trust VPN provider.
   * i.e. I turn to trust my VPN provider to deliever our DNS request without descrpying the DNS content for monitoring and without keeping my browsing history
 * Enable DNS blacklist for whitelist devices within local network
+  * Only add my own devices to the list and you don't do support for your family memeber lol
 * Resolve internal Kubernetes services with internal domain name
-* Make every components replacable, robust and stateless under Mircoservice architecture without mounting physical volume
+* Make every components replacable, standalone, robust and stateless under Mircoservice architecture without mounting physical volume
+  * Let say you replace from Pi-hole to AdGuard Home, chaning another VPN provider, removing CoreDNS because you don't run K8S. We just need to change the upstream DNS servers.
 * All the stuff run in a Kubernete cluster
 
 ![Architecture](https://dannypv.ddns.net/share/2b9cbf9eb2ef70fdffb3c27b2e006ae17cf5d4707bcd7165c90504aa)
