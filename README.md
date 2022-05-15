@@ -344,12 +344,18 @@ Deployment: set unbound container
             - mountPath: /opt/unbound/etc/unbound/unbound.conf
               name: unbound-configmap-etc
               subPath: unbound.conf
+            - mountPath: "/etc/unbound/ca-certificates.crt"
+              name: tls-ca
+              readOnly: true  
     ......
       volumes:
         - name: unbound-configmap-etc
           configMap:
             defaultMode: 0775
             name: unbound-configmap-etc
+        - name: tls-ca
+          hostPath:
+            path: /etc/ssl/certs/ca-certificates.crt
     ......
 ```
 
