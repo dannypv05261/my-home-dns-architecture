@@ -9,6 +9,11 @@ This repository is to provide the idea and the major config of my home DNS archi
 * Enable DNS blacklist for whitelist devices within local network
   * Only add my own devices to the list and you don't do support for your family memeber lol
 * Resolve internal Kubernetes services with internal domain name
+* Make every components robust
+  * If one Pihole is dead, we still have a second Pihole
+  * If all CoreDNSs are dead, the Pihole can query from unbound directly
+  * If Unbounds are dead, the CoreDNS can query directly from public DNS
+  * If 1.1.1.1 is dead, the unbound can still query from 1.0.0.1 or even NextDNS, etc
 * Make every components replacable, standalone, robust and stateless under Mircoservice architecture without mounting physical volume
   * Let say you replace from Pi-hole to AdGuard Home, chaning another VPN provider, removing CoreDNS because you don't run K8S. We just need to change the upstream DNS servers.
 * All the stuff run in a Kubernete cluster
