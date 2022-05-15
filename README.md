@@ -143,10 +143,9 @@ external-dns's deployment: detect ingress change and register domain names to et
             - --log-level=info
             - --domain-filter=home.internal
           env:
-            - name: TZ
-              value: Asia/Hong_kong
             - name: ETCD_URLS
               value: http://etcd.default:2379
+...... 
 ```
 
 - - - -
