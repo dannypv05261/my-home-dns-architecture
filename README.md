@@ -7,8 +7,8 @@ This repository is to provide the idea and the major config of my home DNS archi
 * Do public DNS query by getting rid of local ISP, and choose to trust VPN provider.
   * i.e. I turn to trust my VPN provider to deliever our DNS request without descrpying the DNS content for monitoring and without keeping my browsing history
 * Enable DNS blacklist for whitelist devices within local network
-  * Only add my own devices to the list and you don't need to do support for your family memeber lol
-* Resolve internal Kubernetes services with internal domain name
+  * Only add my own devices to the list and you don't need to do support for your family memebers lol
+* Resolve internal Kubernetes services with internal domain names
 * Make every components robust
   * If one Pihole is dead, we still have a second Pihole
   * If all CoreDNSs are dead, the Pihole can query from unbound directly
