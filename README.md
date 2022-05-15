@@ -361,8 +361,6 @@ Deployment: set unbound container
 
 - - - -
 
-##### Limitation
-You will lack your DNS info to your VPN Server, but it is expected as the objectives above. If anyone has better way to do so, please let me know. Thanks.
-![leak](https://dannypv.ddns.net/share/b8f1a5d64006b52aa5f151fb863363ae4318bcb3c7b97754cbd80db5)
-
+Let do DNS leak test in one of the client
+![DNS leak](https://dannypv.ddns.net/share/b8f1a5d64006b52aa5f151fb863363ae4318bcb3c7b97754cbd80db5)
 
