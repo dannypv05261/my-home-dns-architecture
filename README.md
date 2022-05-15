@@ -364,3 +364,6 @@ Deployment: set unbound container
 Let do DNS leak test in one of the client.
 As our unbound connected to JP VPN Server and we use Cloudflare as public DNS. So, it is fine to leak to Cloudflare under recusive queries
 ![DNS leak](https://dannypv.ddns.net/share/b53e7f3d2819e8069ff10abc41c36431ab4b2548998380c03bb67ebc)
+
+We can also make sure we have enabled DNS over TLS (DoT).
+![DNS DOT](https://dannypv.ddns.net/share/c8f5e77d547f9b1b99c8a7351408eddc7e84ecbc28bbde4a84c94c73)
