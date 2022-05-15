@@ -1,6 +1,6 @@
 # Architecture of my home DNS
 
-Please let me know if you give any suggestion on my solution / improvement on config setting.
+I use this setup starting from 2020 to now. I will keep updating it if I find something new. Please let me know if you give any suggestion on my solution / improvement on config setting.
 
 This repository is to provide the idea and the major config of my home DNS architecture with following objectives:
 * Build a solution with security level higher than sole DNS over TLS but weaker than routing every traffic data to VPN Servers
@@ -12,7 +12,8 @@ This repository is to provide the idea and the major config of my home DNS archi
 * Make every components replacable, standalone, robust and stateless under Mircoservice architecture without mounting physical volume
   * Let say you replace from Pi-hole to AdGuard Home, chaning another VPN provider, removing CoreDNS because you don't run K8S. We just need to change the upstream DNS servers.
 * All the stuff run in a Kubernete cluster
-
+  * You may also apply the same idea on docker-compose
+  
 ![Architecture](https://dannypv.ddns.net/share/2b9cbf9eb2ef70fdffb3c27b2e006ae17cf5d4707bcd7165c90504aa)
 
 Cluster IP address  | Service
