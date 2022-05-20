@@ -4,8 +4,8 @@ I use this setup starting from 2020 to now. I will keep updating it if I find so
 
 This repository is to provide the idea and the major config of my home DNS architecture with following objectives:
 * Build a solution with security level higher than sole DNS over TLS but weaker than routing everything via VPN tunnel
-* Do public DNS query by getting rid of local ISP, and choose to trust VPN provider.
-  * i.e. I turn to trust my VPN provider to deliever our DNS request without descrpying the DNS content for monitoring and without keeping my browsing history
+* Do public DNS query by trusting VPN provider instead of local ISP.
+  * i.e. A bad guy can keep monitoring the DOH request, and they are able to decrypt it in their own means. They can also keep my browsing history
 * Enable DNS blacklist for whitelist devices within local network
   * Only add my own devices to the list and you don't need to do support for your family memebers lol
 * Resolve internal Kubernetes services with internal domain names
